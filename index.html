@@ -14,7 +14,7 @@ html { scroll-behavior: smooth; }
 body {
   font-family:'Poppins', sans-serif;
   background: linear-gradient(rgba(230,240,255,0.95), rgba(230,240,255,0.95)),
-  url("images/22e2d432-eae4-4bdb-80f1-256b28901b5c.jpg.jpg");
+  url("images/22e2d432-eae4-4bdb-80f1-256b28901b5c.jpg");
   background-size:cover;
   background-attachment:fixed;
   color:#1e2a38;
@@ -33,12 +33,18 @@ header {
   align-items:center;
   z-index:1000;
 }
+
 .logo {
   font-size:26px;
   font-weight:700;
   color:#1e3a8a;
   font-family:'Brush Script MT', cursive;
 }
+
+nav {
+  display:flex;
+}
+
 nav a {
   margin-left:25px;
   text-decoration:none;
@@ -46,6 +52,7 @@ nav a {
   font-weight:500;
   transition:0.3s;
 }
+
 nav a:hover { color:#2563eb; }
 
 /* SECTION */
@@ -60,11 +67,13 @@ section {
 
 /* HOME */
 .hero-text { max-width:500px; }
+
 .hero-text h1 {
   font-family:'Playfair Display', serif;
   font-size:45px;
   margin-bottom:20px;
 }
+
 .btn {
   padding:10px 25px;
   background:#2563eb;
@@ -73,6 +82,7 @@ section {
   text-decoration:none;
   transition:0.3s;
 }
+
 .btn:hover { background:#1e40af; }
 
 .hero-img {
@@ -80,6 +90,7 @@ section {
   padding:20px;
   border-radius:40px;
 }
+
 .hero-img img {
   width:300px;
   border-radius:30px;
@@ -90,18 +101,23 @@ section {
   background:#ffffffcc;
   border-radius:40px;
 }
+
 .about img {
   width:280px;
   border-radius:30px;
   background:#dbeafe;
   padding:15px;
 }
+
 .about-text { max-width:500px; }
+
 .stats {
   display:flex;
   gap:20px;
   margin-top:20px;
+  flex-wrap:wrap;
 }
+
 .stat {
   background:#dbeafe;
   padding:15px 25px;
@@ -116,24 +132,28 @@ section {
   border-radius:40px;
   text-align:center;
 }
+
 .skills h2 {
   font-family:'Playfair Display', serif;
   margin-bottom:40px;
   font-size:36px;
   color:#1e3a8a;
 }
+
 .skills-container {
   display:flex;
   justify-content:center;
   gap:60px;
   flex-wrap:wrap;
 }
+
 .skill {
   display:flex;
   flex-direction:column;
   align-items:center;
   width:140px;
 }
+
 .progress-circle {
   position:relative;
   width:140px;
@@ -141,6 +161,7 @@ section {
   border-radius:50%;
   background:#eee;
 }
+
 .progress-circle span {
   position:absolute;
   top:50%;
@@ -150,6 +171,7 @@ section {
   font-size:24px;
   color:#1e3a8a;
 }
+
 .p90 { background:conic-gradient(#2563eb 0% 90%, #eee 90% 100%); }
 .p95 { background:conic-gradient(#2563eb 0% 95%, #eee 95% 100%); }
 .p98 { background:conic-gradient(#2563eb 0% 98%, #eee 98% 100%); }
@@ -161,12 +183,14 @@ section {
   border-radius:40px;
   text-align:center;
 }
+
 .talent-box {
   display:flex;
   justify-content:center;
   gap:30px;
   flex-wrap:wrap;
 }
+
 .talent-card {
   background:#ffffff;
   border-radius:25px;
@@ -175,11 +199,13 @@ section {
   transition:0.3s;
   width:220px;
 }
+
 .talent-card img {
   width:100%;
   height:200px;
   object-fit:cover;
 }
+
 .talent-card:hover {
   transform:translateY(-10px);
 }
@@ -189,6 +215,7 @@ section {
   text-align:center;
   padding:80px 8% 60px;
 }
+
 .contact-box {
   background:#ffffff;
   padding:30px;
@@ -209,8 +236,32 @@ footer {
 
 /* RESPONSIVE */
 @media(max-width:768px){
-  section { flex-direction:column; text-align:center; }
-  nav { display:none; }
+
+  header{
+    flex-direction:column;
+    padding:15px 5%;
+  }
+
+  nav{
+    flex-direction:column;
+    align-items:center;
+    margin-top:10px;
+  }
+
+  nav a{
+    margin:8px 0;
+  }
+
+  section{
+    flex-direction:column;
+    text-align:center;
+    padding:140px 5% 60px;
+  }
+
+  .hero-img img{
+    width:250px;
+  }
+
 }
 </style>
 </head>
@@ -254,9 +305,18 @@ footer {
 <section id="skills" class="skills">
   <h2>My Skills</h2>
   <div class="skills-container">
-    <div class="skill"><div class="progress-circle p90"><span>90%</span></div><p>GOAL SKILLS</p></div>
-    <div class="skill"><div class="progress-circle p95"><span>95%</span></div><p>WORK & RESPONSIBILITY</p></div>
-    <div class="skill"><div class="progress-circle p98"><span>98%</span></div><p>SOCIAL SKILLS</p></div>
+    <div class="skill">
+      <div class="progress-circle p90"><span>90%</span></div>
+      <p>GOAL SKILLS</p>
+    </div>
+    <div class="skill">
+      <div class="progress-circle p95"><span>95%</span></div>
+      <p>WORK & RESPONSIBILITY</p>
+    </div>
+    <div class="skill">
+      <div class="progress-circle p98"><span>98%</span></div>
+      <p>SOCIAL SKILLS</p>
+    </div>
   </div>
 </section>
 
@@ -285,7 +345,3 @@ footer {
 
 </body>
 </html>
-
-
-
-
